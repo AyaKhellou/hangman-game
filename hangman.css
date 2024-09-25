@@ -1,0 +1,181 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.game-title{
+    font-size: 50px;
+    font-weight: bold;
+    margin: 30px;
+    text-align: center;
+
+}
+.game-container{
+    background-color: #eee;
+    width: 1500px;
+    height: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px auto 0;
+
+}
+.hangman-draw{
+    width: 500px;
+    height: 500px;
+    border-bottom: 8px solid #333333;
+    position: relative;
+    .the-stand{
+        height: 500px;
+        width: 8px;
+        background-color: #333333;
+        position: absolute;
+        left: 70px;
+    }
+    .the-stand::after{
+        content: '';
+        position: absolute;
+        background-color: #333333;
+        width: 300px;
+        height: 8px;
+        top: 20px;
+        left: -30px;
+    }
+    .man-draw{
+        .rope{
+            width: 7px;
+            height: 70px;
+            position: absolute;
+            left: 300px;
+            top: 20px;
+            border-left: 7px dashed #333333;
+            display: none;
+        }
+        .head{
+            width: 80px;
+            height: 80px;
+            background-color: black;
+            border-radius: 100%;
+            position: absolute;
+            left: 260px;
+            top: 90px;
+            display: none;
+        }
+        .body{
+            background-color: black;
+            width: 7px;
+            height: 150px;
+            position: absolute;
+            top: 170px;
+            left: 300px;
+            display: none;
+        }
+        .left-arm{
+            background-color: black;
+            width: 7px;
+            height: 100px;
+            position: absolute;
+            top: 170px;
+            left: 255px;
+            transform: rotate(60deg);
+            display: none;
+
+        }
+        .right-arm{
+            background-color: black;
+            width: 7px;
+            height: 100px;
+            position: absolute;
+            top: 170px;
+            left: 345px;
+            transform: rotate(-60deg);
+            display: none;
+        }
+        .left-leg{
+            background-color: black;
+            width: 7px;
+            height: 100px;
+            position: absolute;
+            top: 293px;
+            left: 255px;
+            transform: rotate(60deg);
+            display: none;
+        }
+        .right-leg{
+            background-color: black;
+            width: 7px;
+            height: 100px;
+            position: absolute;
+            top: 293px;
+            left: 345px;
+            transform: rotate(-60deg);
+            display: none;
+        }
+    }
+}
+.the-game{
+    width: 800px;
+    height: 600px;
+    .category{
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        margin: 30px auto;
+        background-color: #00b4d8;
+        width: 200px;
+        padding: 10px;
+        border-radius: 20px;
+        
+    }
+    .word{
+        font-size: 30px;
+        text-align: center;
+        margin: 50px;
+        .Userinput{
+            background-color: #e2e2e2;
+            width: 55px;
+            height: 55px;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            margin: 10px;
+            border-bottom: 5px solid #333333;
+        }
+        .Userinput:focus{
+            outline: none;
+        }
+    }
+    .letters{
+        margin: 20px auto;
+        .letter{
+            background-color: #00b4d8;
+            margin: 10px;
+            width: 55px;
+            height: 55px;
+            font-size: 35px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .letter:hover{
+            background-color: #0188a3;
+        }
+    }
+}
+.letters.finished{
+    pointer-events: none;
+    .letter{
+        opacity: 50%;
+    }
+}
+.the-game .hint{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}

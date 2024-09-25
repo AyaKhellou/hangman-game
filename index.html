@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hangman.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <title>Hangman Game</title>
+</head>
+<body>
+    <div class="game-title">Hangman Game</div>
+    <div class="game-container">
+        <div class="hangman-draw">
+            <div class="the-stand"></div>
+            <div class="man-draw">
+                <div class="rope"></div>
+                <div class="head"></div>
+                <div class="body"></div>
+                <div class="left-arm"></div>
+                <div class="right-arm"></div>
+                <div class="left-leg"></div>
+                <div class="right-leg"></div>
+            </div>
+        </div>
+        <div class="the-game">
+            <div class="category"></div>
+            <div class="word"></div>
+            <div class="letters"></div>
+            <div class="hint"></div>
+        </div>
+    </div>
+    <audio class="right" src="sounds/correct-6033.mp3" preload="auto"></audio>
+    <audio class="wrong" src="sounds/error-8-206492.mp3" preload="auto"></audio>
+    <audio class="win" src="sounds/game-bonus-144751.mp3" preload="auto"></audio>
+    <audio class="fail" src="sounds/game-over-arcade-6435.mp3" preload="auto"></audio>
+    <script src="hangman.js"></script>
+</body>
+</html>
